@@ -15,61 +15,103 @@ html
 				h1 Publishing
 
 			section
-				h2 Images
-				img(src="images/bespoke-logo.jpg")
+				h2 AJ
+				h3 ...but honestly y'all probably know me by now
 
 			section
-				h2 Keyboard Interaction
-				h3 Powered by <a href="https://github.com/markdalgleish/bespoke-keys">bespoke-keys</a>
+				h2 Deployment
+				h3 GitHub Pages
+				h3 Heroku
+				h3 Other options
 
 			section
-				h2 Touch Interaction
-				h3 Powered by <a href="https://github.com/markdalgleish/bespoke-touch">bespoke-touch</a>
+				h2 GitHub Pages
+				h3 Free
+				h3 Static sites
+				h3 Automatic with git pushes
 
 			section
-				h2 Responsive Slides
-				h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
+				h2 GitHub Pages types
+				h3 Project pages -> #[code gh-pages] branch
+				h3 User/org pages -> #[code master] branch, #[code $username.github.io] repo
+				h3 You can also use a #[code docs/] directory or #[code gh-pages] for user/org pages
+				h3
+					a(href='https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/') Docs
 
 			section
-				h2 Bullet List
-				h3 Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
-				ul.build.build-items
-					li Bullet 1
-					li Bullet 2
-					li Bullet 3
+				h2 Demo time
 
 			section
-				h2 Syntax Highlighting
-				h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/PrismJS/prism">Prism</a>
+				h2 GitHub Pages goodies
+				h3 Automatic Jekyll builds
+				h3 Custom domains with a #[code CNAME] file (note: no HTTPS)
+
+			section
+				h2 Heroku
+				h3 Managed hosting
+				h3 Designed for dynamic apps
+
+			section
+				h2 "Managed hosting"
+				h3 You don't worry about OS upgrades, etc.
+				h3 "Just run my app" -> Heroku just runs your app
+
+			section
+				h2 #[code Procfile]
+				h3 A file declaring different kinds of processes
+				h3 Web workers, job queues, etc.
+
+			section
+				h2 #[code Procfile] example
+				// TODO find out why this doesn't style properly
+				code
+					pre.
+						web: node index.js
+
+			section
+				h2 Dyno
+				h3 Compute unit on Heroku
+				h3 Basically just a container running a kind of process from your app
+				h3 You decide how many dynos of which kind
+				h3 Scaling
+
+			section
+				h2 Deployment
 				pre
-					code.language-javascript.
-						(function() {
-							function hanoi(n, a, b, c) {
-								return n ? hanoi(n - 1, a, c, b)
-										.concat([[a, b]])
-										.concat(hanoi(n - 1, c, b, a)) : [];
-							}
-							return hanoi(3, 'left', 'right', 'mid')
-								.map(function(d) {
-									return d[0] + ' -> ' + d[1];
-								});
-						})();
+					code.language-shell.
+						$ heroku create
+						$ git push heroku master
 
-			section(data-bespoke-hash='named-route')
-				h2 Named Route
-				h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-				p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
 			section
-				h2.bullet Just the beginning…
-				br
-				ul.build.build-items
-					li Edit <a href="http://jade-lang.com/">Pug (formerly Jade)</a> markup in <em>'src/index.pug'</em>
-					li Edit <a href="http://stylus-lang.com/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-					li Edit JavaScript in <em>'src/scripts/main.js'</em>
-				br
-				ul.build
-					li
-						strong Enjoy! :)
-						a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+				h2 Demo
+
+			section
+				h2 Logs on Heroku
+				h3 Aggregated from all sources
+				h3 Apps in dynos, Heroku dyno manager, etc.
+				h3 1.5k lines
+				h3 #[code heroku logs --tail]
+
+			section
+				h2 Demo
+
+			section
+				h2 Databases
+				h3 Heroku addons
+				h3 "Extra stuff"
+				h3 Heroku config values tell you where to connect
+				h3 Exposed in the environment
+
+			section
+				h2 Demo
+
+			section
+				h2.bullet Access this presentation again
+				h3 <a href="https://strugee.net/presentation-publishing/">https://strugee.net/presentation-publishing/</a>
+				p
+					// TODO: fix this for the new URL
+					img(src='images/qr.png', alt='QR code to presentation URL', width='200', height='200')
+				h4 Or, #[a(href='https://github.com/strugee/presentation-publishing') check out the source].
+
 
 		script(src='build/build.js')
