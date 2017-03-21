@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Publishing</title>
+		<link rel="stylesheet" type="text/css" href="build/build.css">
+	</head>
+	<body>
+		<article class="deck">
+			<section>
+				<h1>Publishing</h1>
+			</section>
+			<section>
+				<h2>AJ</h2>
+				<h3>...but honestly y'all probably know me by now</h3>
+			</section>
+			<section>
+				<h2>Deployment</h2>
+				<h3>GitHub Pages</h3>
+				<h3>Heroku</h3>
+				<h3>Other options</h3>
+			</section>
+			<section>
+				<h2>GitHub Pages</h2>
+				<h3>Free</h3>
+				<h3>Static sites</h3>
+				<h3>Automatic with git pushes</h3>
+			</section>
+			<section>
+				<h2>GitHub Pages types</h2>
+				<h3>Project pages -> <code>gh-pages</code> branch</h3>
+				<h3>User/org pages -> <code>master</code> branch, <code>$username.github.io</code> repo</h3>
+				<h3>You can also use a <code>docs/</code> directory or <code>gh-pages</code> for user/org pages</h3>
+				<h3><a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">Docs</a></h3>
+			</section>
+			<section>
+				<h2>Demo time</h2>
+			</section>
+			<section>
+				<h2>GitHub Pages goodies</h2>
+				<h3>Automatic Jekyll builds</h3>
+				<h3>Custom domains with a <code>CNAME</code> file (note: no HTTPS)</h3>
+			</section>
+			<section>
+				<h2>Heroku</h2>
+				<h3>Managed hosting</h3>
+				<h3>Designed for dynamic apps</h3>
+			</section>
+			<section>
+				<h2>"Managed hosting"</h2>
+				<h3>You don't worry about OS upgrades, etc.</h3>
+				<h3>"Just run my app" -> Heroku just runs your app</h3>
+			</section>
+			<section>
+				<h2><code>Procfile</code></h2>
+				<h3>A file declaring different kinds of processes</h3>
+				<h3>Web workers, job queues, etc.</h3>
+			</section>
+			<section>
+				<h2><code>Procfile</code> example</h2>
+				<!-- TODO find out why this doesn't style properly--><code>
+					<pre>web: node index.js
+</pre></code>
+			</section>
+			<section>
+				<h2>Dyno</h2>
+				<h3>Compute unit on Heroku</h3>
+				<h3>Basically just a container running a kind of process from your app</h3>
+				<h3>You decide how many dynos of which kind</h3>
+				<h3>Scaling</h3>
+			</section>
+			<section>
+				<h2>Deployment</h2>
+				<pre><code class="language-shell">$ heroku create
+$ git push heroku master
+</code></pre>
+			</section>
+			<section>
+				<h2>Demo</h2>
+			</section>
+			<section>
+				<h2>Logs on Heroku</h2>
+				<h3>Aggregated from all sources</h3>
+				<h3>Apps in dynos, Heroku dyno manager, etc.</h3>
+				<h3>1.5k lines</h3>
+				<h3><code>heroku logs --tail</code></h3>
+			</section>
+			<section>
+				<h2>Demo</h2>
+			</section>
+			<section>
+				<h2>Databases</h2>
+				<h3>Heroku addons</h3>
+				<h3>"Extra stuff"</h3>
+				<h3>Heroku config values tell you where to connect</h3>
+				<h3>Exposed in the environment</h3>
+			</section>
+			<section>
+				<h2>Demo</h2>
+			</section>
+			<section>
+				<h2 class="bullet">Access this presentation again</h2>
+				<h3><a href="https://strugee.net/presentation-publishing/">https://strugee.net/presentation-publishing/</a></h3>
+				<p>
+					<!-- TODO: fix this for the new URL--><img src="images/qr.png" alt="QR code to presentation URL" width="200" height="200">
+				</p>
+				<h4>Or, <a href="https://github.com/strugee/presentation-publishing">check out the source</a>.</h4>
+			</section>
+		</article>
+		<script src="build/build.js"></script>
+	</body>
+</html>
