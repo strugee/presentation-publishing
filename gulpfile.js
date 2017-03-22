@@ -96,7 +96,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('publish', ['clean', 'build'], function(done) {
-	ghpages.publish(path.join(__dirname, 'dist'), { logger: gutil.log }, done);
+	ghpages.publish(path.join(__dirname, 'dist'), { logger: gutil.log, repo: 'git@github.com:strugee/presentation-publishing.git' }, done);
 });
 
 // old alias for publishing on gh-pages
